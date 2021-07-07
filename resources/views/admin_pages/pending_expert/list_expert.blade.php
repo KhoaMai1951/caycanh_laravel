@@ -10,7 +10,7 @@
 
     @if(session()->has('deleted'))
         <div class="alert alert-success">
-            <strong>@lang('custom_message.deleted')</strong>
+            <strong>Đã xóa</strong>
         </div>
     @endif
 
@@ -36,8 +36,8 @@
                         <td>{{ $value->username }}</td>
                         <td>{{ $value->email }}</td>
                         <td>
-                            <a class="btn btn-info" href="/admin/expert_pending/pending_detail/{{$value->id}}">Chi tiết</a>
-                            <button class="btn btn-danger">Xóa</button>
+                            <a class="btn btn-info" href="/admin/expert_pending/expert_detail/{{$value->id}}">Chi tiết</a>
+                            <a class="btn btn-danger" href="/admin/expert_pending/delete_expert?id={{$value->id}}">Xóa</a>
                         </td>
                     </tr>
                 @endforeach

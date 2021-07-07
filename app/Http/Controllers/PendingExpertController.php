@@ -152,7 +152,7 @@ class PendingExpertController extends Controller
             'bio'=> $request->get('bio'),
             'experience_in'=> $request->get('experience_in')
         ]);
-        return Response::json([ 
+        return Response::json([
         ], 200);
     }
 
@@ -170,7 +170,6 @@ class PendingExpertController extends Controller
     // PENDING EXPERT DETAIL PAGE
     public function pendingExpertDetailPage($id)
     {
-
         $pendingExpert = PendingExpert::find($id);
         $pendingExpert->imagesForPendingExpert;
         foreach ($pendingExpert->imagesForPendingExpert as $image) {
@@ -178,6 +177,14 @@ class PendingExpertController extends Controller
         }
         return view('/admin_pages/pending_expert/detail_pending', [
             'pendingExpert' => $pendingExpert,
+        ]);
+    }
+
+    // EXPERT DETAIL PAGE
+    public function expertDetailPage($id)
+    {
+        return view('/admin_pages/pending_expert/detail_expert', [
+            'user' => User::find($id),
         ]);
     }
 
@@ -209,6 +216,14 @@ class PendingExpertController extends Controller
             ->paginate(10);
         return view('/admin_pages/pending_expert/list_expert', [
             'users' => $users,
+        ]);
+    }
+
+    // DELETE EXPERT
+    public function deleteExpert(Request $request) {
+        $this->userService->changeRoleId($request->id, 1);
+        return redirect('/admin/expert_pending/list_expert')->with([
+            'deleted' => true,
         ]);
     }
 }

@@ -129,19 +129,22 @@ class ServerPlantController extends Controller
         $rules = [
             'scientific_name' => 'required',
             'common_name' => 'required',
+            'max_temperature' => 'gt:min_temperature',
+            'min_temperature' => 'lt:max_temperature',
+            'max_ph' => 'gt:min_ph',
+            'min_ph' => 'lt:max_ph'
         ];
         $validator = Validator::make($request->all(), $rules);
-
         if($validator->fails())
             return redirect()
                 ->intended('/admin/server_plant/add_plant')
                 ->withInput()
                 ->withErrors($validator->errors());
-        // ADD NEW
-        $input['accepted'] = 1;
         // upload the image to local storage
         //$input['image_url'] = $this->imageForPostHandleToStorage($request->image);
-        $input['image_url'] = $this->imageForPostHandleToS3($request->image);
+        $request->image != null ? $input['image_url'] = $this->imageForPostHandleToS3($request->image) : $input['image_url'] = '';
+        //add accepted
+        $input['accepted'] = "1";
         //insert new record
         $id = $this->serverPlantService->create($input);
         return redirect('/admin/server_plant/detail/' . $id)->with(['saved' => true]);

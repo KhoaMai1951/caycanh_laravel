@@ -75,6 +75,11 @@ Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'role']], function 
         Route::post('/grant_expert', 'PendingExpertController@grantExpert')->name('expert_pending.grant_expert');
         //DS EXPERT
         Route::get('/list_expert', 'PendingExpertController@listExpertPage')->name('expert_pending.list_expert');
+        //CHI TIẾT EXPERT
+        Route::get('/expert_detail/{id}', 'PendingExpertController@expertDetailPage')->name('expert_pending.expert_detail');
+        //XÓA EXPERT
+        Route::get('/delete_expert', 'PendingExpertController@deleteExpert')->name('expert_pending.delete_expert');
+        Route::post('/delete_expert', 'PendingExpertController@deleteExpert')->name('expert_pending.delete_expert');
     });
     //TAG
     Route::group(['prefix' => '/tag'], function () {

@@ -182,7 +182,6 @@ Route::group(['prefix' => 'v1'], function () {
         Route::post('/check_status', 'PendingExpertController@checkStatus');
         // USER EDIT YÊU CẦU EXPERT
         Route::post('/edit_request', 'PendingExpertController@editRequest');
-        
     });
     // USER PLANT
     Route::group(['prefix' => '/user_plant'], function () {

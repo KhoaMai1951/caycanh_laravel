@@ -1,6 +1,6 @@
 @extends('layouts.admin_layout')
 
-@section('title', 'Chi tiết cây cảnh')
+@section('title', 'Chi tiết chờ duyệt chuyên gia')
 
 @section('content')
     <style>

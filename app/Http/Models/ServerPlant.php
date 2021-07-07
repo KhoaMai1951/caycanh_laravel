@@ -14,6 +14,7 @@ class ServerPlant extends Model
     protected $table = 'server_plant';
 
     protected $fillable = [
+        'accepted',
         'common_name',
         'scientific_name',
         'image_url',

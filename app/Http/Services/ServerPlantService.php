@@ -47,8 +47,6 @@ class ServerPlantService
                 ->orWhere('scientific_name', 'LIKE', '%' . $keyword . '%');
         })
             ->where('accepted', '=', true)
-            ->skip($skip)
-            ->take($take)
             ->orderBy('common_name', 'ASC')
             ->paginate(10);
 
