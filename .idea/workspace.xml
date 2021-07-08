@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="acdee528-ea47-4021-a90f-1249348d9524" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/ServerPlantService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/ServerPlantService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_pages/server_plant/add_plant.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_pages/server_plant/add_plant.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_pages/server_plant/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_pages/server_plant/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin_pages/server_plant/detail_contribute.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_pages/server_plant/detail_contribute.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin_pages/server_plant/detail_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_pages/server_plant/detail_edit.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -417,6 +416,7 @@
       <workItem from="1625460948788" duration="439000" />
       <workItem from="1625659619178" duration="6525000" />
       <workItem from="1625711709926" duration="7483000" />
+      <workItem from="1625736010311" duration="2713000" />
     </task>
     <servers />
   </component>
