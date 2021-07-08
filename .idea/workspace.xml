@@ -20,17 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acdee528-ea47-4021-a90f-1249348d9524" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_pages/pending_expert/detail_expert.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PendingExpertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PendingExpertController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServerPlantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServerPlantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Models/ServerPlant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/ServerPlant.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Services/ServerPlantService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/ServerPlantService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_pages/pending_expert/detail_pending.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_pages/pending_expert/detail_pending.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_pages/pending_expert/list_expert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_pages/pending_expert/list_expert.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin_pages/server_plant/add_plant.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_pages/server_plant/add_plant.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin_pages/server_plant/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_pages/server_plant/detail.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -423,6 +416,7 @@
       <workItem from="1625454598540" duration="302000" />
       <workItem from="1625460948788" duration="439000" />
       <workItem from="1625659619178" duration="6525000" />
+      <workItem from="1625711709926" duration="7483000" />
     </task>
     <servers />
   </component>

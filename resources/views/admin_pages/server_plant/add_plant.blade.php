@@ -63,7 +63,7 @@
                 <!-- MỨC SÁNG -->
                 <div class="form-group bg-light">
                     <label class="required">Mức độ ánh sáng mặt trời (1-5)   </label>
-                    <input value=1 type="number" name="sunglight" min="1" max="5">
+                    <input value=1 type="number" name="sunlight" min="1" max="5">
                 </div>
                 <!-- NHIỆT ĐỘ -->
                 <div class="form-group bg-light @error('min_temperature') is-invalid @enderror ">

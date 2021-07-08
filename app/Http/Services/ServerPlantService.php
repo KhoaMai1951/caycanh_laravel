@@ -115,19 +115,14 @@ class ServerPlantService
             $plant->temperature_range = [$plant->min_temperature, $plant->max_temperature];
             $plant->ph_range = [$plant->min_ph, $plant->max_ph];
             $plant->image_url = ImageUrlHandle::getDynamicImageUrl($plant->image_url);
-            $plant->makeHidden(['min_temperature', 'max_temperature', 'min_ph', 'max_ph']);
             $plant->pet_friendly == 1 ? $plant->pet_friendly = true : $plant->pet_friendly = false;
         }
         return $plant;
     }
 
-
-
     // UPDATE PLANT
     public function update($input)
     {
-        DB::table('server_plant')
-            ->where('id', $input['id'])
-            ->update($input);
+        ServerPlant::where('id', '=', $input['id'])->update($input);
     }
 }
