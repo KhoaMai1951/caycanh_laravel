@@ -115,8 +115,8 @@
                         <textarea  class="form-control @error('information') is-invalid @enderror" type="text"
                                    placeholder="Nhập thông tin (tối đa 3000 kí tự)"
                                    name="common_issue"
-                                   value="{{ old('common_issue'), $plant->common_issue }}" rows="7" cols="50"
-                                   autocomplete="name" autofocus></textarea>
+                                   rows="7" cols="50"
+                                   autocomplete="name" autofocus>{{ old('common_issue', $plant->common_issue) }}</textarea>
                     </div>
                 </div>
 

@@ -56,17 +56,17 @@
                     <!-- ĐỘ KHÓ -->
                     <div class="form-group bg-light">
                         <label class="required">Độ khó (1-5)</label>
-                        <input value={{$plant->difficulty}} type="number" name="difficulty" min="1" max="5">
+                        <input value="{{$plant->difficulty}}" type="number" name="difficulty" min="1" max="5">
                     </div>
                     <!-- MỨC TƯỚI -->
                     <div class="form-group bg-light">
                         <label class="required">Mức độ tưới nước (1-5)</label>
-                        <input value={{$plant->water_level}} type="number" name="water_level" min="1" max="5">
+                        <input value="{{$plant->water_level}}" type="number" name="water_level" min="1" max="5">
                     </div>
                     <!-- MỨC SÁNG -->
                     <div class="form-group bg-light">
                         <label class="required">Mức độ ánh sáng mặt trời (1-5)   </label>
-                        <input value={{$plant->sunlight}} type="number" name="sunlight" min="1" max="5">
+                        <input value="{{$plant->sunlight}}" type="number" name="sunlight" min="1" max="5">
                     </div>
                     <!-- NHIỆT ĐỘ -->
                     <div class="form-group bg-light @error('min_temperature') is-invalid @enderror ">
@@ -111,8 +111,8 @@
                         <textarea  class="form-control @error('information') is-invalid @enderror" type="text"
                                    placeholder="Nhập thông tin (tối đa 3000 kí tự)"
                                    name="common_issue"
-                                   value="{{ old('common_issue'), $plant->common_issue }}" rows="7" cols="50"
-                                   autocomplete="name" autofocus></textarea>
+                                   rows="7" cols="50"
+                                   autocomplete="name" autofocus>{{ old('common_issue', $plant->common_issue )}}</textarea>
                     </div>
                     <!-- UPLOAD IMAGE -->
                     <label class="required">Upload hình mới</label>

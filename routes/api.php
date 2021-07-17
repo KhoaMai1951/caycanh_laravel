@@ -33,7 +33,7 @@ Route::group(['prefix' => 'v1'], function () {
         dd($request->header());
     });
     // USER
-    Route::group(['prefix' => '/user'], function () {
+    Route::group(['prefix' => '/user', 'middleware' => 'auth:api'], function () {
         //TẠO NHANH USER
         Route::get('/create_user_instant', 'UserController@createUserInstant');
         Route::post('/create_user_instant', 'UserController@createUserInstant');
@@ -63,7 +63,7 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('/get_username', 'UserController@getUserName');
     });
     // POST
-    Route::group(['prefix' => '/post'], function () {
+    Route::group(['prefix' => '/post', 'middleware' => 'auth:api'], function () {
         Route::post('/test_dio', 'PostController@testDio');
         // LẤY CHI TIẾT BÀI VIẾT THEO ID
         Route::get('/get_post', 'PostController@getPostById');
@@ -126,12 +126,12 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('/check_accepted_exchange_plant', 'PostController@checkAcceptedExchangePlant');
     });
     // TAG
-    Route::group(['prefix' => '/tag'], function () {
+    Route::group(['prefix' => '/tag', 'middleware' => 'auth:api'], function () {
         Route::get('/get_all_tags', 'TagController@getAllTags');
         Route::get('/get_all_tags_by_type_id', 'TagController@getAllTagsByTypeId');
     });
     // COMMENT
-    Route::group(['prefix' => '/comment'], function () {
+    Route::group(['prefix' => '/comment', 'middleware' => 'auth:api'], function () {
         Route::get('/get_all_comments_by_post_id', 'CommentController@getAllCommentsByPostId');
         Route::get('/get_number_of_comments_by_post_id', 'CommentController@getNumberOfCommentsByPostId');
         // SUBMIT COMMENT
@@ -148,7 +148,7 @@ Route::group(['prefix' => 'v1'], function () {
         Route::post('/delete_comment', 'CommentController@deleteComment');
     });
     // SERVER PLANT
-    Route::group(['prefix' => '/server_plant'], function () {
+    Route::group(['prefix' => '/server_plant', 'middleware' => 'auth:api'], function () {
         // SEEDER
         Route::get('/seeder', 'ServerPlantController@seeder');
         // LẤY DS THÔNG TIN CÂY CẢNH THEO CỤM
@@ -164,13 +164,13 @@ Route::group(['prefix' => 'v1'], function () {
         Route::post('/get_plant_detail_for_edit', 'ServerPlantController@getPlantDetailForUserEdit');
     });
     // SERVER PLANT USER EDIT
-    Route::group(['prefix' => '/server_plant_user_edit'], function () {
+    Route::group(['prefix' => '/server_plant_user_edit', 'middleware' => 'auth:api'], function () {
         // UPLOAD EDIT THÔNG TIN CÂY CẢNH
         Route::post('/upload_plant', 'ServerPlantUserEditController@uploadPlant');
         Route::get('/upload_plant', 'ServerPlantUserEditController@uploadPlant');
     });
     // EXPERT PENDING
-    Route::group(['prefix' => '/expert_pending'], function () {
+    Route::group(['prefix' => '/expert_pending', 'middleware' => 'auth:api'], function () {
         // UPLOAD YÊU CẦU LÀM EXPERT
         Route::post('/request_expert', 'PendingExpertController@handleRequestExpert');
         Route::get('/request_expert', 'PendingExpertController@handleRequestExpert');
@@ -184,7 +184,7 @@ Route::group(['prefix' => 'v1'], function () {
         Route::post('/edit_request', 'PendingExpertController@editRequest');
     });
     // USER PLANT
-    Route::group(['prefix' => '/user_plant'], function () {
+    Route::group(['prefix' => '/user_plant', 'middleware' => 'auth:api'], function () {
         // UPLOAD USER PLANT
         Route::post('/submit', 'UserPlantController@submitPlant');
         Route::get('/submit', 'UserPlantController@submitPlant');
@@ -199,7 +199,7 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('/request_exchange', 'UserPlantController@requestExchange');
     });
     // CHAT
-    Route::group(['prefix' => '/chat'], function () {
+    Route::group(['prefix' => '/chat', 'middleware' => 'auth:api'], function () {
         // GET CHATTING USERS LIST
         Route::post('/get_chatting_list', 'ChatController@getChattingUsersList');
         Route::get('/get_chatting_list', 'ChatController@getChattingUsersList');

@@ -26,6 +26,7 @@ class ServerPlantUserEditController extends Controller
                 'status' => true,
             ], 200);
         }
+        //NẾU KHÔNG
         DB::beginTransaction();
         //insert new record
         $id = ServerPlantUserEdit::create($input)->id;;
